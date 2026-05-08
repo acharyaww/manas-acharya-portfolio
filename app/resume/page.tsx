@@ -20,16 +20,6 @@ interface Position {
 
 const EXPERIENCE: Position[] = [
   {
-    title: "Data Science Intern",
-    org: "PCH Tech Solutions",
-    dates: "September 2025 — Present",
-    bullets: [
-      "Contributing to the Gadi AI ride service platform.",
-      "Applying ML and data analysis to improve service algorithms.",
-      "20–25 hours / week.",
-    ],
-  },
-  {
     title: "Service Writer / Beginner Technician",
     org: "Walmart Auto Care Center",
     dates: "2020 — Present (~5 years)",
