@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Manas Acharya — Portfolio
 
-## Getting Started
+Personal portfolio for [Manas Raman Acharya](https://manasacharya.com),
+Data Science student at the University of Colorado Boulder.
+Showcases nine projects across production systems, machine learning, and
+full-stack development.
 
-First, run the development server:
+## Tech stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript (strict mode)
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** lucide-react
+- **Deployment:** Vercel
+- **Analytics:** `@vercel/analytics`, `@vercel/speed-insights`
+
+## Routes
+
+| Route | Description |
+|---|---|
+| `/` | Hero · Projects · About · Contact (single-page flow) |
+| `/projects` | Filterable showcase of all 9 projects |
+| `/projects/[slug]` | Per-project detail page (statically generated) |
+| `/about` | Bio + tech stack |
+| `/resume` | Interactive timeline + downloadable PDF |
+| `/contact` | Email · LinkedIn · GitHub |
+| `/sitemap.xml`, `/robots.txt`, `/opengraph-image` | Auto-generated |
+
+## Local development
 
 ```bash
+git clone https://github.com/acharyaww/manas-acharya-portfolio.git
+cd manas-acharya-portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | What it does |
+|---|---|
+| `npm run dev` | Local dev server with hot reload |
+| `npm run build` | Production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | ESLint |
+| `npm run type-check` | TypeScript without emit |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  layout.tsx              # Root layout, metadata, JSON-LD
+  page.tsx                # Home (Hero → Projects → About → Contact)
+  projects/[slug]/        # Dynamic detail pages
+  resume/                 # Resume timeline
+  about/, contact/        # Standalone routes
+  sitemap.ts, robots.ts   # SEO
+  opengraph-image.tsx     # Generated 1200×630 OG image
+components/
+  ui/                     # Button, Card, Badge, SectionHeader, ProjectCard
+  sections/               # Hero, ProjectsShowcase, About, Contact, Footer, Starfield
+lib/
+  projects.ts             # Project data + types
+  site.ts                 # Site-wide constants (URL, handles, etc.)
+  utils.ts                # cn()
+public/
+  resume.pdf              # ⬅ replace with real PDF
+  images/profile.jpg      # ⬅ replace with real headshot
+  images/projects/        # ⬅ replace with real screenshots
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Editing project data
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All project content lives in [`lib/projects.ts`](./lib/projects.ts).
+Each project supports:
 
-## Deploy on Vercel
+- `title`, `tagline`, `description`, `techStack[]`
+- `category`: `production` · `ml-data` · `fullstack`
+- `liveUrl?`, `githubUrl?`, `metrics?`, `status?`
+- `featured?` — featured cards take wider layout in the "All" view
+- `longDescription?` — `{ problem, solution, impact }` shown on detail page
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Adding a new project automatically wires up its detail page route, sitemap
+entry, and Next/Previous navigation. Removing one is just deleting from the
+array.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Manual content TODO before launch
+
+- [ ] `/public/resume.pdf` — real PDF
+- [ ] `/public/images/profile.jpg` — real headshot (replace `MA` placeholder)
+- [ ] `/public/images/projects/{slug}-*.png` — real screenshots
+- [ ] Verify all `liveUrl` / `githubUrl` values resolve
+- [ ] Set the canonical domain in [`lib/site.ts`](./lib/site.ts) (currently `manasacharya.com`)
+
+## Deployment
+
+Auto-deploys to Vercel from `main`. Preview deploys on every PR.
+
+```bash
+# One-time setup
+vercel link
+# Production deploy from CLI (optional — pushes to main do this automatically)
+vercel --prod
+```
+
+## License
+
+© Manas Raman Acharya. All rights reserved.
