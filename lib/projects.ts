@@ -123,11 +123,13 @@ export const projects: Project[] = [
     id: "la-liga-ranking",
     slug: "la-liga-ranking",
     title: "La Liga Ranking",
-    tagline: "Mathematical team ranking system",
+    tagline: "Team ranking from match-result averaging",
     description:
-      "Applied Perron-Frobenius theorem to analyze 760 La Liga game records for team ranking (team project).",
-    techStack: ["Python", "NumPy", "Linear Algebra"],
+      "Ranked all 20 teams of the 2021-22 La Liga season from 760 match records. Encoded wins/draws/losses, pivoted into a team-vs-team matrix, and computed per-opponent average performance. Team project.",
+    techStack: ["Python", "pandas", "NumPy"],
     category: "ml-data",
+    githubUrl: "https://github.com/acharyaww/la-liga-ranking",
+    metrics: "Top 4 within 1 position of actual final standings",
     featured: false,
   },
   {
