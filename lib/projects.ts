@@ -111,12 +111,13 @@ export const projects: Project[] = [
     id: "retail-sales-forecasting",
     slug: "retail-sales-forecasting",
     title: "Time-Series Retail Sales Forecasting",
-    tagline: "Ensemble forecasting for retail optimization",
+    tagline: "Global-pool ensemble for daily retail sales",
     description:
-      "Time-series forecasting using ARIMA, Random Forest, and Gradient Boosting on 365 days of sales data.",
-    techStack: ["Python", "ARIMA", "Scikit-learn", "Pandas"],
+      "End-to-end forecasting pipeline (validation → EDA → features → baselines → ML → ensemble → report) on a year of daily retail sales for a small business client. Implements the global-pool approach from Montero-Manso & Hyndman (2021).",
+    techStack: ["Python", "Scikit-learn", "Pandas", "ARIMA", "statsmodels"],
     category: "ml-data",
-    metrics: "24% improvement over baseline",
+    githubUrl: "https://github.com/acharyaww/retail-sales-forecasting",
+    metrics: "24% RMSE improvement over seasonal-naive baseline",
     featured: false,
   },
   {
