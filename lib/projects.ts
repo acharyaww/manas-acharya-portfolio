@@ -134,12 +134,13 @@ export const projects: Project[] = [
     id: "bike-sharing-patterns",
     slug: "bike-sharing-patterns",
     title: "Bike-Sharing Usage Patterns",
-    tagline: "Classification model for usage prediction",
+    tagline: "Classification model for weekday demand",
     description:
-      "Weekday classification using Logistic Regression, Bagging, and SVM for bike-sharing demand prediction.",
-    techStack: ["Python", "Scikit-learn", "Pandas"],
+      "Weekday demand classification on Seoul's hourly bike-share data, comparing Logistic Regression, Bagging (Random Forest), and SVM. Bagging won.",
+    techStack: ["R", "caret", "randomForest", "e1071"],
     category: "ml-data",
-    metrics: "0.0487 misclassification rate with Bagging",
+    githubUrl: "https://github.com/acharyaww/bike-sharing-patterns",
+    metrics: "4.87% misclassification rate (Bagging)",
     featured: false,
   },
   {
