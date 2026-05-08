@@ -1,6 +1,6 @@
 # Manas Acharya — Portfolio
 
-Personal portfolio for [Manas Raman Acharya](https://manasacharya.com),
+Personal portfolio for [Manas Raman Acharya](https://manasacharya.dev),
 Data Science student at the University of Colorado Boulder.
 Showcases nine projects across production systems, machine learning, and
 full-stack development.
@@ -93,7 +93,7 @@ array.
 - [ ] `/public/images/profile.jpg` — real headshot (replace `MA` placeholder)
 - [ ] `/public/images/projects/{slug}-*.png` — real screenshots
 - [ ] Verify all `liveUrl` / `githubUrl` values resolve
-- [ ] Set the canonical domain in [`lib/site.ts`](./lib/site.ts) (currently `manasacharya.com`)
+- [ ] Verify the canonical domain in [`lib/site.ts`](./lib/site.ts) is correct (currently `manasacharya.dev`)
 
 ## Deployment
 

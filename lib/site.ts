@@ -2,7 +2,7 @@ export const SITE = {
   name: "Manas Acharya Portfolio",
   fullName: "Manas Raman Acharya",
   shortName: "Manas Acharya",
-  url: "https://manasacharya.com",
+  url: "https://manasacharya.dev",
   email: "manasacharya2004@gmail.com",
   github: "https://github.com/acharyaww",
   linkedin: "https://linkedin.com/in/manas-acharya-969702379",

@@ -103,7 +103,8 @@ export const projects: Project[] = [
     description:
       "Pro bono NLP solution using TF-IDF and reinforcement learning to automate invoice code assignment for corporate operations.",
     techStack: ["Python", "TF-IDF", "SQLite", "Scikit-learn"],
-    category: "ml-data",
+    category: "production",
+    liveUrl: "https://majestic-fairy-906906.netlify.app/",
     featured: false,
   },
   {

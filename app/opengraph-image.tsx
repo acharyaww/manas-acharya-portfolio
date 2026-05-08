@@ -116,7 +116,7 @@ export default async function OpengraphImage() {
               letterSpacing: 1,
             }}
           >
-            manasacharya.com
+            manasacharya.dev
           </div>
         </div>
       </div>
