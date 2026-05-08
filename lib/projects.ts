@@ -153,8 +153,9 @@ export const projects: Project[] = [
     tagline: "Clinical prediction model",
     description:
       "Cardiovascular risk assessment on the UCI Heart Disease dataset. Team project with Jenisha Shrestha; compared multiple classifiers, with Logistic Regression emerging as the most promising.",
-    techStack: ["Python", "Scikit-learn", "Pandas"],
+    techStack: ["R", "caret", "randomForest", "leaps"],
     category: "ml-data",
+    githubUrl: "https://github.com/acharyaww/heart-disease-prediction",
     metrics: "0.152 misclassification rate (Logistic Regression)",
     featured: false,
   },
