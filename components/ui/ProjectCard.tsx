@@ -52,17 +52,17 @@ export function ProjectCard({ project, size = "default" }: ProjectCardProps) {
         />
         <div
           className={cn(
-            "relative overflow-hidden rounded-md bg-background/40 border border-border/60",
+            "relative overflow-hidden rounded-md bg-surface border border-border/60",
             isFeature ? "aspect-[16/8]" : "aspect-[16/9]",
           )}
           aria-hidden
         >
           <div className="absolute inset-0 grid place-items-center">
-            <span className="font-mono text-xl text-accent/30 tracking-widest">
+            <span className="font-mono text-xl text-accent/40 tracking-widest">
               {project.title.toUpperCase()}
             </span>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/8 via-transparent to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
 
         <CardBody className="flex flex-col gap-4 flex-1">
@@ -70,13 +70,13 @@ export function ProjectCard({ project, size = "default" }: ProjectCardProps) {
             <div className="min-w-0">
               <h3
                 className={cn(
-                  "font-bold tracking-tight group-hover:text-accent transition-colors",
+                  "font-serif font-medium tracking-tight group-hover:text-accent transition-colors",
                   isFeature ? "text-2xl md:text-3xl" : "text-xl",
                 )}
               >
                 {project.title}
               </h3>
-              <p className="mt-1 text-sm text-accent/90">{project.tagline}</p>
+              <p className="mt-1 text-sm text-accent">{project.tagline}</p>
             </div>
             <ArrowUpRight
               className="shrink-0 text-muted group-hover:text-accent transition-colors"

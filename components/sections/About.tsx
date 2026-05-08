@@ -153,10 +153,10 @@ export function About() {
               aria-hidden
               className="absolute -inset-3 rounded-lg bg-accent/10 blur-2xl"
             />
-            <div className="relative aspect-square w-full rounded-lg overflow-hidden border border-accent/40 bg-surface shadow-card">
+            <div className="relative aspect-square w-full rounded-lg overflow-hidden border-2 border-accent/30 bg-surface shadow-card">
               <div
                 aria-hidden
-                className="absolute inset-0 grid place-items-center font-mono text-7xl text-accent/40 select-none"
+                className="absolute inset-0 grid place-items-center font-serif text-8xl text-accent/40 select-none"
               >
                 MA
               </div>

@@ -31,7 +31,7 @@ export const projects: Project[] = [
       "Real-time SEC filing tracker analyzing 13D/13G, Form 4, and 8-K filings to detect pre-move stock signals before public awareness.",
     techStack: ["Python", "Flask", "PostgreSQL", "SEC EDGAR API", "Railway"],
     category: "production",
-    liveUrl: "https://whalewatch.app",
+    liveUrl: "https://alert-joy-production-c92c.up.railway.app",
     metrics: "Tracks filings from 500+ institutions",
     status: "v2 backtest engine in progress",
     featured: true,

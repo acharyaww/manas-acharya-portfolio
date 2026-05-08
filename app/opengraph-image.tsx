@@ -16,10 +16,10 @@ export default async function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           background:
-            "linear-gradient(135deg, #0a0e27 0%, #0a0e27 60%, #151935 100%)",
+            "linear-gradient(135deg, #FAF7F0 0%, #FAF7F0 60%, #F0EAD9 100%)",
           padding: 80,
-          color: "#e4e4e7",
-          fontFamily: "system-ui, sans-serif",
+          color: "#2A2823",
+          fontFamily: "Georgia, serif",
           position: "relative",
         }}
       >
@@ -30,7 +30,7 @@ export default async function OpengraphImage() {
             left: 0,
             right: 0,
             height: 6,
-            background: "#B8955A",
+            background: "#5F7A52",
           }}
         />
         <div
@@ -45,8 +45,9 @@ export default async function OpengraphImage() {
               fontSize: 22,
               letterSpacing: 8,
               textTransform: "uppercase",
-              color: "#B8955A",
+              color: "#5F7A52",
               fontWeight: 600,
+              fontFamily: "system-ui, sans-serif",
             }}
           >
             Portfolio
@@ -63,9 +64,10 @@ export default async function OpengraphImage() {
           <div
             style={{
               fontSize: 96,
-              fontWeight: 800,
+              fontWeight: 500,
               letterSpacing: -2,
               lineHeight: 1.05,
+              fontFamily: "Georgia, serif",
             }}
           >
             Manas Raman Acharya
@@ -73,10 +75,11 @@ export default async function OpengraphImage() {
           <div
             style={{
               fontSize: 36,
-              color: "#a1a1aa",
+              color: "#6B6660",
               fontWeight: 500,
               lineHeight: 1.2,
               maxWidth: 1000,
+              fontFamily: "system-ui, sans-serif",
             }}
           >
             Data Science Student Building AI-Powered Solutions
@@ -93,21 +96,22 @@ export default async function OpengraphImage() {
           <div
             style={{
               fontSize: 22,
-              color: "#a1a1aa",
+              color: "#6B6660",
               display: "flex",
               gap: 16,
+              fontFamily: "system-ui, sans-serif",
             }}
           >
             <span>WhaleWatch</span>
-            <span style={{ color: "#B8955A" }}>·</span>
+            <span style={{ color: "#5F7A52" }}>·</span>
             <span>Zenith</span>
-            <span style={{ color: "#B8955A" }}>·</span>
+            <span style={{ color: "#5F7A52" }}>·</span>
             <span>JobFlow</span>
           </div>
           <div
             style={{
               fontSize: 20,
-              color: "#B8955A",
+              color: "#5F7A52",
               fontFamily: "monospace",
               letterSpacing: 1,
             }}

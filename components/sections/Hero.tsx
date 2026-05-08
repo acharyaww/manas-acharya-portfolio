@@ -3,7 +3,6 @@
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui";
-import { Starfield } from "./Starfield";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -44,12 +43,11 @@ export function Hero() {
     >
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background to-[#070a1d]"
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background to-surface/60"
       />
-      <Starfield />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background to-transparent"
+        className="pointer-events-none absolute right-0 top-1/4 -z-10 h-[400px] w-[400px] rounded-full bg-accent/8 blur-3xl"
       />
 
       <div className="mx-auto w-full max-w-container px-6 md:px-10 py-20 md:py-32">
@@ -69,14 +67,14 @@ export function Hero() {
 
             <motion.h1
               variants={i}
-              className="text-5xl md:text-7xl font-bold tracking-tight text-balance leading-[1.05]"
+              className="font-serif text-5xl md:text-7xl font-medium tracking-tight text-balance leading-[1.05]"
             >
               Manas Raman Acharya
             </motion.h1>
 
             <motion.p
               variants={i}
-              className="text-xl md:text-2xl text-foreground/90 font-medium"
+              className="text-xl md:text-2xl text-foreground/85 font-medium"
             >
               Data Science Student Building AI-Powered Solutions
             </motion.p>
@@ -119,12 +117,12 @@ export function Hero() {
             <div className="relative">
               <div
                 aria-hidden
-                className="absolute -inset-4 rounded-full bg-accent/10 blur-2xl"
+                className="absolute -inset-6 rounded-full bg-accent/10 blur-2xl"
               />
-              <div className="relative h-[260px] w-[260px] md:h-[300px] md:w-[300px] rounded-full overflow-hidden border border-accent/40 bg-surface shadow-card-hover">
+              <div className="relative h-[260px] w-[260px] md:h-[300px] md:w-[300px] rounded-full overflow-hidden border-2 border-accent/30 bg-surface shadow-card-hover">
                 <div
                   aria-hidden
-                  className="absolute inset-0 grid place-items-center font-mono text-5xl text-accent/40 select-none"
+                  className="absolute inset-0 grid place-items-center font-serif text-6xl text-accent/40 select-none"
                 >
                   MA
                 </div>

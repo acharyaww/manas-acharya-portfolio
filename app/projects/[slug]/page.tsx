@@ -82,7 +82,7 @@ export default function ProjectDetailPage({
         <span className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
           {categoryLabels[project.category]}
         </span>
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance leading-[1.05]">
+        <h1 className="font-serif text-4xl md:text-6xl font-medium tracking-tight text-balance leading-[1.05]">
           {project.title}
         </h1>
         <p className="text-xl md:text-2xl text-foreground/85 max-w-3xl">
@@ -141,11 +141,11 @@ export default function ProjectDetailPage({
         className="mt-12 aspect-[16/8] w-full rounded-lg border border-border bg-surface relative overflow-hidden"
       >
         <div className="absolute inset-0 grid place-items-center">
-          <span className="font-mono text-2xl md:text-3xl text-accent/30 tracking-widest">
+          <span className="font-mono text-2xl md:text-3xl text-accent/40 tracking-widest">
             {project.title.toUpperCase()}
           </span>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/8 via-transparent to-transparent" />
       </div>
 
       <section className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">

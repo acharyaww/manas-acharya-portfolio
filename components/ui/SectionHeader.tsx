@@ -33,7 +33,7 @@ export function SectionHeader({
           {eyebrow}
         </span>
       )}
-      <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-balance">
+      <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-balance">
         {title}
       </h2>
       <motion.span

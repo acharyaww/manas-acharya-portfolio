@@ -13,11 +13,11 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const categoryStyles: Record<BadgeCategory, string> = {
-  language: "border-accent/40 text-accent bg-accent/5",
-  framework: "border-blue-400/30 text-blue-300 bg-blue-400/5",
-  database: "border-emerald-400/30 text-emerald-300 bg-emerald-400/5",
-  tool: "border-purple-400/30 text-purple-300 bg-purple-400/5",
-  default: "border-border text-muted bg-surface",
+  language: "border-accent/40 text-accent bg-accent/8",
+  framework: "border-stone-500/30 text-stone-700 bg-stone-100/60",
+  database: "border-amber-800/25 text-amber-900 bg-amber-50/70",
+  tool: "border-zinc-500/30 text-zinc-700 bg-zinc-100/60",
+  default: "border-border text-muted bg-surface/60",
 };
 
 const LANGUAGES = new Set([

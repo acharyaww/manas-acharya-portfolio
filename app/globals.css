@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0e27;
-  --foreground: #e4e4e7;
-  --surface: #151935;
-  --muted: #a1a1aa;
-  --border: #1f2547;
-  --accent: #b8955a;
+  --background: #faf7f0;
+  --foreground: #2a2823;
+  --surface: #f0ead9;
+  --muted: #6b6660;
+  --border: #d8d0bd;
+  --accent: #5f7a52;
 }
 
 html {
@@ -44,13 +44,6 @@ body {
 }
 
 @media print {
-  :root {
-    --background: #ffffff;
-    --foreground: #111111;
-    --surface: #ffffff;
-    --muted: #555555;
-    --border: #cccccc;
-  }
   body {
     background: #ffffff !important;
     color: #111111 !important;
