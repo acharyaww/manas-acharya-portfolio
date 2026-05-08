@@ -108,6 +108,19 @@ export const projects: Project[] = [
     featured: false,
   },
   {
+    id: "image-generation",
+    slug: "image-generation",
+    title: "DALL-E + SAM Image Editing",
+    tagline: "Generative pipeline: text → image → mask → inpaint",
+    description:
+      "Three-stage generative-image pipeline combining OpenAI DALL-E 3 for generation, Meta's Segment Anything Model for region selection, and DALL-E's edit endpoint for mask-based inpainting. Demonstrated on a fashion design concept.",
+    techStack: ["Python", "PyTorch", "OpenAI API", "segment-anything", "OpenCV"],
+    category: "ml-data",
+    githubUrl: "https://github.com/acharyaww/image-generation",
+    metrics: "1024×1024 generation + SAM segmentation + 3-variant inpainting",
+    featured: false,
+  },
+  {
     id: "retail-sales-forecasting",
     slug: "retail-sales-forecasting",
     title: "Time-Series Retail Sales Forecasting",
