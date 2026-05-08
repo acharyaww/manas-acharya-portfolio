@@ -1,7 +1,9 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
+import Image from "next/image";
 import { Mail, MapPin } from "lucide-react";
+import { SITE } from "@/lib/site";
 
 function LinkedinIcon({ size = 16 }: { size?: number }) {
   return (
@@ -154,13 +156,27 @@ export function About() {
               className="absolute -inset-3 rounded-lg bg-accent/10 blur-2xl"
             />
             <div className="relative aspect-square w-full rounded-lg overflow-hidden border-2 border-accent/30 bg-surface shadow-card">
-              <div
-                aria-hidden
-                className="absolute inset-0 grid place-items-center font-serif text-8xl text-accent/40 select-none"
-              >
-                MA
-              </div>
-              <span className="sr-only">Manas Acharya headshot placeholder</span>
+              {SITE.profileImage ? (
+                <Image
+                  src={SITE.profileImage}
+                  alt="Manas Acharya, Data Science student at CU Boulder"
+                  fill
+                  sizes="(min-width: 768px) 400px, 100vw"
+                  className="object-cover"
+                />
+              ) : (
+                <>
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 grid place-items-center font-serif text-8xl text-accent/40 select-none"
+                  >
+                    MA
+                  </div>
+                  <span className="sr-only">
+                    Manas Acharya headshot placeholder
+                  </span>
+                </>
+              )}
             </div>
           </div>
 

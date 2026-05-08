@@ -1,8 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui";
+import { SITE } from "@/lib/site";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -120,15 +122,28 @@ export function Hero() {
                 className="absolute -inset-6 rounded-full bg-accent/10 blur-2xl"
               />
               <div className="relative h-[260px] w-[260px] md:h-[300px] md:w-[300px] rounded-full overflow-hidden border-2 border-accent/30 bg-surface shadow-card-hover">
-                <div
-                  aria-hidden
-                  className="absolute inset-0 grid place-items-center font-serif text-6xl text-accent/40 select-none"
-                >
-                  MA
-                </div>
-                <span className="sr-only">
-                  Manas Acharya headshot placeholder
-                </span>
+                {SITE.profileImage ? (
+                  <Image
+                    src={SITE.profileImage}
+                    alt="Manas Acharya, Data Science student at CU Boulder"
+                    fill
+                    sizes="(min-width: 768px) 300px, 260px"
+                    priority
+                    className="object-cover"
+                  />
+                ) : (
+                  <>
+                    <div
+                      aria-hidden
+                      className="absolute inset-0 grid place-items-center font-serif text-6xl text-accent/40 select-none"
+                    >
+                      MA
+                    </div>
+                    <span className="sr-only">
+                      Manas Acharya headshot placeholder
+                    </span>
+                  </>
+                )}
               </div>
             </div>
           </motion.div>

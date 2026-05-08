@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ExternalLink } from "lucide-react";
@@ -55,14 +56,26 @@ export function ProjectCard({ project, size = "default" }: ProjectCardProps) {
             "relative overflow-hidden rounded-md bg-surface border border-border/60",
             isFeature ? "aspect-[16/8]" : "aspect-[16/9]",
           )}
-          aria-hidden
         >
-          <div className="absolute inset-0 grid place-items-center">
-            <span className="font-mono text-xl text-accent/40 tracking-widest">
-              {project.title.toUpperCase()}
-            </span>
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-br from-accent/8 via-transparent to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          {project.image ? (
+            <Image
+              src={project.image}
+              alt={`${project.title} screenshot`}
+              fill
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              className="object-cover"
+            />
+          ) : (
+            <div aria-hidden className="absolute inset-0 grid place-items-center">
+              <span className="font-mono text-xl text-accent/40 tracking-widest">
+                {project.title.toUpperCase()}
+              </span>
+            </div>
+          )}
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-br from-accent/8 via-transparent to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          />
         </div>
 
         <CardBody className="flex flex-col gap-4 flex-1">

@@ -14,6 +14,7 @@ export interface Project {
   metrics?: string;
   status?: string;
   featured: boolean;
+  screenshots?: string[];
   longDescription?: {
     problem: string;
     solution: string;
@@ -95,17 +96,6 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "health-risk-prediction",
-    slug: "health-risk-prediction",
-    title: "Health Risk Prediction Model",
-    tagline: "ML model for health risk assessment",
-    description:
-      "Predictive model using Logistic and Ridge Regression with interactive Tableau dashboard for health risk visualization.",
-    techStack: ["Python", "Scikit-learn", "Tableau", "Pandas"],
-    category: "ml-data",
-    featured: false,
-  },
-  {
     id: "hilton-invoice-finder",
     slug: "hilton-invoice-finder",
     title: "Hilton Invoice Code Finder",
@@ -157,10 +147,10 @@ export const projects: Project[] = [
     title: "Heart Disease Prediction",
     tagline: "Clinical prediction model",
     description:
-      "Logistic Regression model on UCI Heart Disease dataset for cardiovascular risk assessment.",
+      "Cardiovascular risk assessment on the UCI Heart Disease dataset. Team project with Jenisha Shrestha; compared multiple classifiers, with Logistic Regression emerging as the most promising.",
     techStack: ["Python", "Scikit-learn", "Pandas"],
     category: "ml-data",
-    metrics: "Pseudo R² 0.547 on 303 patient records",
+    metrics: "0.152 misclassification rate (Logistic Regression)",
     featured: false,
   },
 ];

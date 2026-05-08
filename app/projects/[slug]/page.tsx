@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
@@ -136,16 +137,27 @@ export default function ProjectDetailPage({
         )}
       </header>
 
-      <div
-        aria-hidden
-        className="mt-12 aspect-[16/8] w-full rounded-lg border border-border bg-surface relative overflow-hidden"
-      >
-        <div className="absolute inset-0 grid place-items-center">
-          <span className="font-mono text-2xl md:text-3xl text-accent/40 tracking-widest">
-            {project.title.toUpperCase()}
-          </span>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/8 via-transparent to-transparent" />
+      <div className="mt-12 aspect-[16/8] w-full rounded-lg border border-border bg-surface relative overflow-hidden">
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={`${project.title} hero screenshot`}
+            fill
+            priority
+            sizes="(min-width: 1024px) 1024px, 100vw"
+            className="object-cover"
+          />
+        ) : (
+          <div aria-hidden className="absolute inset-0 grid place-items-center">
+            <span className="font-mono text-2xl md:text-3xl text-accent/40 tracking-widest">
+              {project.title.toUpperCase()}
+            </span>
+          </div>
+        )}
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-br from-accent/8 via-transparent to-transparent"
+        />
       </div>
 
       <section className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
@@ -199,24 +211,27 @@ export default function ProjectDetailPage({
         </div>
       </section>
 
-      <section className="mt-16">
-        <SubHeader>Screenshots</SubHeader>
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[0, 1].map((i) => (
-            <div
-              key={i}
-              aria-hidden
-              className="aspect-[16/10] rounded-lg border border-border bg-surface relative overflow-hidden"
-            >
-              <div className="absolute inset-0 grid place-items-center">
-                <span className="font-mono text-xs uppercase tracking-wider text-muted">
-                  Screenshot {i + 1}
-                </span>
+      {project.screenshots && project.screenshots.length > 0 && (
+        <section className="mt-16">
+          <SubHeader>Screenshots</SubHeader>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {project.screenshots.map((src, i) => (
+              <div
+                key={src}
+                className="aspect-[16/10] rounded-lg border border-border bg-surface relative overflow-hidden"
+              >
+                <Image
+                  src={src}
+                  alt={`${project.title} screenshot ${i + 1}`}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                />
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      )}
 
       <nav
         aria-label="Project navigation"
