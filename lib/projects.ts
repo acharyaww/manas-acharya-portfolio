@@ -139,11 +139,11 @@ export const projects: Project[] = [
     title: "La Liga Ranking",
     tagline: "Team ranking from match-result averaging",
     description:
-      "Ranked all 20 teams of the 2021-22 La Liga season from 760 match records. Encoded wins/draws/losses, pivoted into a team-vs-team matrix, and computed per-opponent average performance. Team project.",
+      "Ranked all 20 teams of the 2020-21 La Liga season from 760 match records. Encoded wins/draws/losses (1, 0.5, 0), pivoted into a team-vs-team matrix, and computed per-opponent average performance. Team project with Jenisha Shrestha and Bipin Bisural.",
     techStack: ["Python", "pandas", "NumPy"],
     category: "ml-data",
     githubUrl: "https://github.com/acharyaww/la-liga-ranking",
-    metrics: "Top 4 within 1 position of actual final standings",
+    metrics: "Top 4 (Atlético, Real Madrid, Barcelona, Sevilla) — exact match to actual 2020-21 standings",
     featured: false,
   },
   {
