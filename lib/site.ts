@@ -10,7 +10,7 @@ export const SITE = {
   employer: "PCH Tech Solutions",
   alumniOf: "University of Colorado Boulder",
   location: "Lafayette, Colorado",
-  // Set to "/images/profile.jpg" once you've dropped the file there.
+  // Set to a path under /public to render the headshot.
   // Leave as "" to keep the MA monogram placeholder.
-  profileImage: "",
+  profileImage: "/images/projects/profile.png",
 } as const;
