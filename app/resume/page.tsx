@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { Download } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Footer } from "@/components/sections/Footer";
 
@@ -135,19 +133,8 @@ export default function ResumePage() {
         <SectionHeader
           eyebrow="Resume"
           title="Manas Raman Acharya"
-          description="Data Science student at the University of Colorado Boulder. Download the PDF or read the interactive version below."
+          description="Data Science student at the University of Colorado Boulder. Experience, education, and skills below."
         />
-        <div className="print:hidden flex flex-wrap gap-3 mt-2">
-          <a href="/resume.pdf" download>
-            <Button
-              variant="primary"
-              size="md"
-              leftIcon={<Download size={16} aria-hidden />}
-            >
-              Download PDF Resume
-            </Button>
-          </a>
-        </div>
       </header>
 
       <section className="mt-14">

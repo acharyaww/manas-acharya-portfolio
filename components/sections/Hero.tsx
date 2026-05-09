@@ -99,13 +99,8 @@ export function Hero() {
                   View Projects
                 </Button>
               </Link>
-              <a href="/resume.pdf" download>
-                <Button variant="secondary" size="lg">
-                  Download Resume
-                </Button>
-              </a>
               <Link href="#contact" scroll>
-                <Button variant="ghost" size="lg">
+                <Button variant="secondary" size="lg">
                   Contact
                 </Button>
               </Link>
