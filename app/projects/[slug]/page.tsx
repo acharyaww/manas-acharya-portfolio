@@ -137,8 +137,8 @@ export default function ProjectDetailPage({
         )}
       </header>
 
-      <div className="mt-12 aspect-[16/8] w-full rounded-lg border border-border bg-surface relative overflow-hidden">
-        {project.image ? (
+      {project.image && (
+        <div className="mt-12 aspect-[16/8] w-full rounded-lg border border-border bg-surface relative overflow-hidden">
           <Image
             src={project.image}
             alt={`${project.title} hero screenshot`}
@@ -147,18 +147,12 @@ export default function ProjectDetailPage({
             sizes="(min-width: 1024px) 1024px, 100vw"
             className="object-cover"
           />
-        ) : (
-          <div aria-hidden className="absolute inset-0 grid place-items-center">
-            <span className="font-mono text-2xl md:text-3xl text-accent/40 tracking-widest">
-              {project.title.toUpperCase()}
-            </span>
-          </div>
-        )}
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-gradient-to-br from-accent/8 via-transparent to-transparent"
-        />
-      </div>
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-br from-accent/8 via-transparent to-transparent"
+          />
+        </div>
+      )}
 
       <section className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
         {ld ? (

@@ -51,13 +51,13 @@ export function ProjectCard({ project, size = "default" }: ProjectCardProps) {
           aria-label={`View details for ${project.title}`}
           className="absolute inset-0 z-10 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         />
-        <div
-          className={cn(
-            "relative overflow-hidden rounded-md bg-surface border border-border/60",
-            isFeature ? "aspect-[16/8]" : "aspect-[16/9]",
-          )}
-        >
-          {project.image ? (
+        {project.image && (
+          <div
+            className={cn(
+              "relative overflow-hidden rounded-md bg-surface border border-border/60",
+              isFeature ? "aspect-[16/8]" : "aspect-[16/9]",
+            )}
+          >
             <Image
               src={project.image}
               alt={`${project.title} screenshot`}
@@ -65,18 +65,12 @@ export function ProjectCard({ project, size = "default" }: ProjectCardProps) {
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
               className="object-cover"
             />
-          ) : (
-            <div aria-hidden className="absolute inset-0 grid place-items-center">
-              <span className="font-mono text-xl text-accent/40 tracking-widest">
-                {project.title.toUpperCase()}
-              </span>
-            </div>
-          )}
-          <div
-            aria-hidden
-            className="absolute inset-0 bg-gradient-to-br from-accent/8 via-transparent to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          />
-        </div>
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-gradient-to-br from-accent/8 via-transparent to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
+        )}
 
         <CardBody className="flex flex-col gap-4 flex-1">
           <div className="flex items-start justify-between gap-3">
@@ -98,7 +92,12 @@ export function ProjectCard({ project, size = "default" }: ProjectCardProps) {
             />
           </div>
 
-          <p className="text-sm text-muted leading-relaxed line-clamp-3">
+          <p
+            className={cn(
+              "text-sm text-muted leading-relaxed",
+              project.image ? "line-clamp-3" : "line-clamp-6",
+            )}
+          >
             {project.description}
           </p>
 
