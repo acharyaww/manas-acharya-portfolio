@@ -139,7 +139,7 @@ export function About() {
     >
       <SectionHeader
         eyebrow="About"
-        title="Combining technical depth with customer-facing experience."
+        title="Data science, applied from problem to production."
       />
 
       <div className="mt-12 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-start">
@@ -222,28 +222,31 @@ export function About() {
           className="md:col-span-7 flex flex-col gap-6 text-foreground/90 leading-relaxed"
         >
           <p>
-            I&apos;m a Data Science student at the University of Colorado Boulder
-            (graduating May 2027), currently working as a Data Science Intern at
-            PCH Tech Solutions on the Gadi AI ride service platform. With nearly
-            five years of experience as a Service Writer at Walmart Auto Care
-            Center, I bring a unique perspective combining technical expertise
-            with customer-facing problem solving.
+            I&apos;m a Junior Data Science student at the University of Colorado
+            Boulder, graduating May 2027. My work spans machine learning,
+            statistical modeling, and full-stack AI development — building
+            applications end-to-end from problem definition through production
+            deployment.
           </p>
           <p>
-            My work focuses on machine learning, statistical modeling, and
-            full-stack development. I&apos;m currently advancing my SQL skills
-            and pursuing an additional data science certification to complement
-            my IBM SkillsBuild Enterprise Design Thinking Practitioner
-            certification. Coursework includes Time Series Analysis, Machine
-            Learning, Deep Learning, and Statistical Modeling.
+            Four production AI applications are currently live:{" "}
+            <strong>WhaleWatch</strong> (real-time SEC filing intelligence),{" "}
+            <strong>Zenith</strong> (Claude + Pinecone RAG motivational
+            platform), <strong>JobFlow</strong> (an 8-step Claude pipeline for
+            ATS-optimized resumes), and <strong>Hilton Invoice Code Finder</strong>{" "}
+            (browser-side TF-IDF classification). Academic projects cover
+            time-series forecasting (Gradient Boosting on retail POS data, 24%
+            MAE reduction vs ARIMA), ensemble classification methods, and
+            multi-modal generative pipelines combining DALL-E with Meta&apos;s
+            Segment Anything Model.
           </p>
           <p>
-            As a fluent speaker of Nepali, Hindi, and English, I bring cultural
-            awareness and diverse perspectives to my work. Beyond data science,
-            I&apos;m passionate about soccer, basketball, hockey, running, and
-            reading. I previously served as Member Engagement &amp; Event
-            Co-coordinator for the Nepalese Student Association at CU Boulder,
-            leading an event with 700+ attendees.
+            Coursework includes Time Series Analysis (APPM-STAT 4720/5720),
+            Machine Learning, Deep Learning, and Statistical Modeling. I hold an
+            IBM SkillsBuild Enterprise Design Thinking Practitioner certification
+            (December 2025) and am currently pursuing an additional data science
+            certification while advancing my SQL skills. Languages: Nepali,
+            Hindi, and English.
           </p>
         </motion.div>
       </div>
