@@ -33,6 +33,7 @@ export const projects: Project[] = [
     techStack: ["Python", "Flask", "PostgreSQL", "SEC EDGAR API", "Railway"],
     category: "production",
     liveUrl: "https://alert-joy-production-c92c.up.railway.app",
+    image: "/images/projects/whalewatch.png",
     metrics: "Tracks filings from 500+ institutions",
     status: "v2 backtest engine in progress",
     featured: true,
@@ -55,6 +56,7 @@ export const projects: Project[] = [
     techStack: ["Next.js", "FastAPI", "PostgreSQL", "Claude API", "Pinecone"],
     category: "production",
     liveUrl: "https://zenith-motive.com",
+    image: "/images/projects/zenith.png",
     metrics: "Personalized coaching from curated wisdom database",
     featured: true,
     longDescription: {
@@ -83,6 +85,7 @@ export const projects: Project[] = [
     category: "production",
     liveUrl: "https://jobflow-lime.vercel.app",
     githubUrl: "https://github.com/acharyaww/jobflow",
+    image: "/images/projects/jobflow.png",
     metrics:
       "8-step pipeline with keyword matching, relevance scoring, and ATS optimization",
     featured: true,
