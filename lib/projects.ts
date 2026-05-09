@@ -108,6 +108,7 @@ export const projects: Project[] = [
     techStack: ["JavaScript", "HTML", "CSS", "TF-IDF"],
     category: "production",
     liveUrl: "https://majestic-fairy-906906.netlify.app/",
+    image: "/images/projects/hilton-invoice-finder.png",
     featured: false,
   },
   {
