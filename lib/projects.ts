@@ -101,14 +101,15 @@ export const projects: Project[] = [
   {
     id: "hilton-invoice-finder",
     slug: "hilton-invoice-finder",
-    title: "Hilton Invoice Code Finder",
-    tagline: "Offline invoice classification web app",
+    title: "Invoice Code Matching Tool",
+    tagline: "Independent client project — in daily production use",
     description:
-      "Pro bono offline-first web app for a Hilton corporate manager. Matches free-text invoice descriptions to 93 GL codes across 10 departments using TF-IDF + cosine similarity in the browser. iPhone-optimized UI; localStorage persistence for use in the field.",
-    techStack: ["JavaScript", "HTML", "CSS", "TF-IDF"],
+      "TF-IDF + cosine similarity matching tool developed for a corporate manager, reducing invoice code lookup time from minutes to seconds. In daily production use since 2024. Zero-installation, single-file application (no IT deployment needed). Sustains match accuracy through a feedback loop that incorporates each accepted or rejected suggestion.",
+    techStack: ["JavaScript", "HTML", "CSS", "TF-IDF", "Cosine Similarity"],
     category: "production",
     liveUrl: "https://majestic-fairy-906906.netlify.app/",
     image: "/images/projects/hilton-invoice-finder.png",
+    status: "in daily production use since 2024",
     featured: false,
   },
   {
